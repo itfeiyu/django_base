@@ -25,6 +25,7 @@ SECRET_KEY = '*@&pj1lee3p0^40oa^i8hv-n@7q*rgq0=z$5d+m-u)6^9@^hd4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+#默认是 127.0.0.1
 ALLOWED_HOSTS = []
 
 
@@ -37,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'book.apps.BookConfig',
+    'book', #方案1
+    #'book.apps.BookConfig', #方案2
 ]
 
 MIDDLEWARE = [
@@ -104,9 +106,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
+#设置语言
+LANGUAGE_CODE = 'zh-Hans'#'en-us'
+#设置时区
+TIME_ZONE = 'Asia/Shanghai'#'UTC'
 
 USE_I18N = True
 

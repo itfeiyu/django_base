@@ -15,6 +15,22 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+###  剖析 BASE_DIR, 一层一层解析
+# print(__file__)
+# /home/caiyzihen/桌面/meiduoshopping/django_base/bookmanager/bookmanager/settings.py
+
+# print(os.path.abspath(__file__))
+# /home/caiyzihen/桌面/meiduoshopping/django_base/bookmanager/bookmanager/settings.py
+
+# dirname() 获取文件的目录
+# os.path.dirname(os.path.abspath(__file__))
+# /home/caiyzihen/桌面/meiduoshopping/django_base/bookmanager/bookmanager
+
+# BASE_DIR
+# /home/caiyzihen/桌面/meiduoshopping/django_base/bookmanager
+###  所以最终的得到的结果是: BASE_DIR 就是最外层 bookmanager,项目所有的东西都在这个bookmanager文件夹下
+###  即项目所有的东西都是以 BASE_DIR 为相对路径
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -23,10 +39,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '*@&pj1lee3p0^40oa^i8hv-n@7q*rgq0=z$5d+m-u)6^9@^hd4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# 调试模式
+# 在我们开发的时候，我们需要看到更多的信息，所以要开启debug模式
+# 当我们的程序上线之后，就改为False
 DEBUG = True
 
-#默认是 127.0.0.1
-ALLOWED_HOSTS = []
+# 允许什么样的形式来访问我们的项目. 默认是 127.0.0.1
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

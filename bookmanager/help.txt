@@ -1,0 +1,10 @@
+bookmanager (项目)
+    .settings.py (设置/配置参数文件)
+    .urls.py (总路由)
+
+book (子应用)
+    .models.py (模型类)
+    .urls.py (子路由)
+
+templates (模板文件)
+    放置html模板

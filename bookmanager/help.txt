@@ -5,6 +5,9 @@ bookmanager (项目)
 book (子应用)
     .models.py (模型类)
     .urls.py (子路由)
+    .admin.py (站点相关)
+    .apps (与子应用配置相关)
+    .tests.py (单元测试相关)
 
 templates (模板文件)
     放置html模板
